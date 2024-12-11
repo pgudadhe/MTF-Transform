@@ -28,5 +28,6 @@ For simplicity we will assume that encoding values are from a-to-z only (instead
 | hellohellooo**o** | 7,5,11,0,14,3,3,3,0,0,3,0,0 | (olehabcdfgijkmnpqrstuvwxyz) |
 | Final String | 7,5,11,0,14,3,3,3,0,0,3,0,0 | (olehabcdfgijkmnpqrstuvwxyz) |
 
-
+As seen in the example above, MTF transform effectively converts input text in frequently occuring smaller numbers. Doing a pass of Run Length Encoding (RLE) can further compress consecutive literals like 0,0,0.. 
+Running Huffman Encoder on MTF/MTF+RLE output would definitely assign smaller bit codes for these smaller literals, resulting in better compression ratios.
 
